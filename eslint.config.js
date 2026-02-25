@@ -10,16 +10,16 @@ export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     plugins: { js },
-    extends: ["js/recommended"]
+    extends: ["js/recommended"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
     languageOptions: {
       parser: tsParser,
-      globals: globals.node
+      globals: globals.node,
     },
     plugins: { "@typescript-eslint": tsPlugin },
-    extends: ["plugin:@typescript-eslint/recommended"]
+    extends: ["plugin:@typescript-eslint/recommended"],
   },
-  pluginSecurity.configs.recommended
+  pluginSecurity.configs.recommended,
 ]);
