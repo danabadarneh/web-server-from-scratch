@@ -1,24 +1,24 @@
 {
   "name": "web-server-from-scratch",
   "version": "1.0.0",
-  "description": "A Node.js TypeScript project for learning ESLint",
+  "description": "Web server from scratch with linting, security checks, and CI",
+  "type": "module",
   "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "lint": "eslint .",
-    "format:check": "prettier --check .",
-    "format:write": "prettier --write ."
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "author": "Dana Badarneh",
-  "license": "MIT",
   "devDependencies": {
-    "@types/eslint-plugin-security": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^8.56.1",
-    "@typescript-eslint/parser": "^8.56.1",
+    "@eslint/js": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "eslint": "^8.57.1",
-    "eslint-plugin-security": "^4.0.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.3.0"
+    "eslint-plugin-security": "^1.7.1",
+    "globals": "^13.24.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.0"
   }
 }
