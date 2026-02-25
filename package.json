@@ -1,0 +1,22 @@
+{
+  "name": "web-server-from-scratch",
+  "version": "1.0.0",
+  "description": "A Node.js TypeScript project for learning ESLint",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "lint": "eslint src --ext .ts,.js",
+    "format": "prettier --write 'src/**/*.{ts,js}'",
+    "format:check": "prettier --check 'src/**/*.{ts,js}'"
+  },
+  "author": "Dana Badarneh",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.57.1",
+    "typescript": "^5.2.2",
+    "prettier": "^3.0.0"
+  }
+}
