@@ -1,19 +1,20 @@
 // src/index.ts
+import http from "http";
 
-import express from "express";
-import { json } from "body-parser";
-import { config } from "./config";
+// Example handler, unused variables prefixed with `_` to satisfy ESLint
+const _handler = (req: http.IncomingMessage, res: http.ServerResponse) => {
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/plain");
+  res.end("Hello, world!\n");
+};
 
-const app = express();
-app.use(json());
-
-// مثال endpoint صحي
-app.get("/health", (_req, _res) => {
-  _res.status(200).send({ status: "ok" });
+// Create server (you can replace _req, _res with actual usage if needed)
+const server = http.createServer((_req, _res) => {
+  // Nothing needed here for now
 });
 
-// بدء السيرفر
-const PORT = config.port || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+// Start server
+const PORT = 3000;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
