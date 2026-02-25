@@ -9,17 +9,17 @@ export default [
     files: ["**/*.{js,ts}"],
     languageOptions: {
       parser: tsParser,
-      globals: globals.node
+      globals: globals.node,
     },
     plugins: {
       js,
       "@typescript-eslint": tsPlugin,
-      security: securityPlugin
+      security: securityPlugin,
     },
     extends: [
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
-      "plugin:security/recommended"
-    ]
-  }
+      "plugin:security/recommended",
+    ],
+  },
 ];
