@@ -1,8 +1,3 @@
-import { serverFunction } from "./index";
-
-function startApp() {
-  console.log("Starting the app...");
-  serverFunction();
+export function startServer() {
+  console.log("Server started");
 }
-
-startApp();

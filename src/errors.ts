@@ -35,5 +35,3 @@ export class NotFoundError extends Error {
     this.statusCode = 404;
   }
 }
-
-
