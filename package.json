@@ -1,18 +1,18 @@
 {
   "name": "web-server-from-scratch",
   "version": "1.0.0",
+  "main": "dist/main.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "test": "echo npm run test && vitest run src/main.test.ts"
+    "test": "echo 'npm run test' && vitest run src/main.test.ts"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
-    "typescript": "^5.9.3",
     "ts-node": "^10.9.2",
-    "eslint": "^8.57.1",
-    "prettier": "^3.8.1"
+    "typescript": "^5.9.3",
+    "@types/node": "^22.9.0",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "express": "^4.18.2"
