@@ -19,7 +19,10 @@ export default [
       security: securityPlugin,
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_" },
+      ],
       "security/detect-non-literal-regexp": "warn",
       "security/detect-non-literal-fs-filename": "warn",
     },
