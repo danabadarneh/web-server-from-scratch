@@ -1,8 +1,5 @@
-import { describe, it } from "node:test";
-import assert from "assert";
+import { test, expect } from 'vitest'
 
-describe("Basic Test", () => {
-  it("should pass", () => {
-    assert.strictEqual(1 + 1, 2);
-  });
-});
+test('Basic Test', () => {
+  expect(1 + 1).toBe(2)
+})
