@@ -1,23 +1,14 @@
-# استخدم Node Alpine صغير وخفيف
+# استخدم Node Alpine صغير الحجم
 FROM node:20-alpine
 
 WORKDIR /app
 
-# انسخ package.json و package-lock.json
 COPY package*.json ./
+COPY tsconfig.json ./
+COPY src ./src
 
-# ثبّت dependencies
 RUN npm install
-
-# انسخ الكود
-COPY . .
-
-# ابني المشروع
 RUN npm run build
 
-# اضبط البورت
-ENV PORT=3000
 EXPOSE 3000
-
-# شغّل المشروع
-CMD ["npm", "start"]
+CMD ["node", "dist/main.js"]
