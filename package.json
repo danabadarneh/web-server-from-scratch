@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "test": "echo 'Running tests...' && echo 'npm run test' && node --loader ts-node/esm src/main.test.ts"
+    "test": "node --no-warnings --loader ts-node/esm src/main.test.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
