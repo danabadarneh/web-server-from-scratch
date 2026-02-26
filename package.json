@@ -1,24 +1,25 @@
 {
   "name": "web-server-from-scratch",
   "version": "1.0.0",
-  "description": "Web server from scratch with linting, security checks, and CI",
-  "type": "module",
-  "main": "dist/main.js",
+  "description": "",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/main.js",
-    "lint": "eslint . --max-warnings=0",
-    "format": "prettier --write .",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "eslint src --max-warnings=0",
     "format:check": "prettier --check ."
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^8.57.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
     "eslint-plugin-security": "^1.7.1",
-    "globals": "^13.24.0",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.0"
+    "prettier": "^3.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0"
   }
 }

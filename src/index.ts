@@ -1,20 +1,9 @@
-// src/index.ts
 import http from "http";
 
-// Example handler, unused variables prefixed with `_` to satisfy ESLint
-const _handler = (req: http.IncomingMessage, res: http.ServerResponse) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello, world!\n");
-};
-
-// Create server (you can replace _req, _res with actual usage if needed)
-const server = http.createServer((_req, _res) => {
-  // Nothing needed here for now
+const server = http.createServer(() => {
+  // لا شيء حالياً
 });
 
-// Start server
-const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+server.listen(3000, () => {
+  console.log("Server running on http://localhost:3000");
 });
